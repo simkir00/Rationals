@@ -104,6 +104,18 @@ public class Rational {
         return res;
     }
 
+    public Rational multiply(Rational rat){
+        Rational res = new Rational();
+        int res_num = this.numerator * rat.numerator;
+        int res_denom = this.denominator * rat.denominator;
+        int tmp = Utility.gcd(res_num, res_denom);
+        res_num /= tmp;
+        res_denom /= tmp;
+        res.setNumerator(res_num);
+        res.setDenominator(res_denom);
+        return res;
+    }
+
     /**
      * To double double.
      *
