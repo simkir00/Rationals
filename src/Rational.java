@@ -33,7 +33,9 @@ public class Rational {
      */
     public Rational(int numerator, int denominator) {
         if (denominator == 0) {
-            throw new IllegalArgumentException("Can't be divided by zero");
+            System.out.println("Warning! Numerator can't be divided by zero\nRational(0, 1) was created instead");
+            this.numerator = 0;
+            this.denominator = 1;
         } else {
             int tmp = Utility.gcd(numerator, denominator);
             if (denominator < 0) {
@@ -43,13 +45,6 @@ public class Rational {
             this.numerator = numerator / tmp;
             this.denominator = denominator / tmp;
         }
-    }
-
-    public static void swap(int a, int b) {
-        int tmp;
-        tmp = a;
-        a = b;
-        b = a;
     }
 
     /**
