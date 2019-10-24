@@ -23,5 +23,8 @@ public class Main {
         Polinom pol = new Polinom(arr2);
         System.out.printf("Polinom: %s\n", pol);
         System.out.printf("Result of calculating (x = 3): %f\n", pol.calculate(3));
+
+        Rational r4 = new Rational(r2.multiply(r3));
+        System.out.printf("Result of multiplying %s and %s: %s\n", r2, r3, r4);
     }
 }

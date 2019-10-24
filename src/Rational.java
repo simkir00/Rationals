@@ -104,6 +104,13 @@ public class Rational {
         return res;
     }
 
+    public Rational multiply(Rational rat){
+        int res_num = this.numerator * rat.numerator;
+        int res_denom = this.denominator * rat.denominator;
+        Rational res = new Rational(res_num, res_denom);
+        return res;
+    }
+
     /**
      * To double double.
      *
