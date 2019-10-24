@@ -32,11 +32,17 @@ public class Rational {
      * @param denominator the denominator
      */
     public Rational(int numerator, int denominator) {
-        this.numerator = numerator;
         if (denominator == 0) {
             throw new IllegalArgumentException("Can't be divided by zero");
-        } else
-            this.denominator = denominator;
+        } else {
+            int tmp = Utility.gcd(numerator, denominator);
+            if (denominator < 0) {
+                numerator = -numerator;
+                denominator = -denominator;
+            }
+            this.numerator = numerator / tmp;
+            this.denominator = denominator / tmp;
+        }
     }
 
     public static void swap(int a, int b) {
@@ -114,6 +120,9 @@ public class Rational {
 
     @Override
     public String toString() {
+        if (this.denominator == 1) {
+            return String.format("%d", numerator);
+        }
         return String.format("%d/%d", numerator, denominator);
     }
 }
