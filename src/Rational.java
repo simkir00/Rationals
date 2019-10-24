@@ -33,7 +33,7 @@ public class Rational {
      */
     public Rational(int numerator, int denominator) {
         if (denominator == 0) {
-            System.out.println("Warning! Numerator can't be divided by zero\nRational(0, 1) was created instead");
+            System.out.println("Warning! Numerator can't be divided by zero\nSo Rational(0, 1) was created");
             this.numerator = 0;
             this.denominator = 1;
         } else {
@@ -109,6 +109,10 @@ public class Rational {
         int res_denom = this.denominator * rat.denominator;
         Rational res = new Rational(res_num, res_denom);
         return res;
+    }
+
+    public Rational  inverse(){
+        return new  Rational(this.denominator,this.numerator);
     }
 
     /**

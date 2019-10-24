@@ -26,5 +26,8 @@ public class Main {
 
         Rational r4 = new Rational(r2.multiply(r3));
         System.out.printf("Result of multiplying %s and %s: %s\n", r2, r3, r4);
+
+        Rational r5 = r4.inverse();
+        System.out.printf("Result of inversion %s: %s\n", r4, r5);
     }
 }
