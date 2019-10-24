@@ -13,11 +13,13 @@ public class Main {
 
         RationalList arr1 = new RationalList().addRational(r1).addRational(r2);
         System.out.printf("Rational array: %s\n", arr1);
+        System.out.printf("Max element in the set: %s\n", arr1.getMax());
 
         RationalList arr2 = new RationalList(arr1);
         arr2.addRational(r1.add(r2));
         System.out.printf("New rational array: %s\n", arr2);
         Rational r3 = arr2.getRational(3);
+        System.out.printf("Min element in the set: %s\n", arr2.getMin());
         System.out.printf("Third element of the set: %s\n", r3);
 
         Polinom pol = new Polinom(arr2);
