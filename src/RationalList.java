@@ -20,12 +20,18 @@ public class RationalList {
 
 
     public RationalList addRational(Rational x) {
+        /*
+        При добавлении нового элемента в список производится проверка этого элемента с уже имеющимися min max,
+        что обеспечивает корректное обновление данных о min и max элементах в списке
+        */
+
         if (array.size() == 0 || x.toDouble() > cachedMax.toDouble()) {
             cachedMax = x;
         }
         if (array.size() == 0 || x.toDouble() < cachedMin.toDouble()) {
             cachedMin = x;
         }
+
         array.add(x);
         return this;
     }
@@ -34,11 +40,11 @@ public class RationalList {
         return array.get(index - 1);
     }
 
-    public Rational getMax(){
+    public Rational getMax() {
         return this.cachedMax;
     }
 
-    public Rational getMin(){
+    public Rational getMin() {
         return this.cachedMin;
     }
 
