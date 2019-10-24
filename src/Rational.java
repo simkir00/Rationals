@@ -34,14 +34,14 @@ public class Rational {
     public Rational(int numerator, int denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("Can't be divided by zero");
-        } else{
+        } else {
             int tmp = Utility.gcd(numerator, denominator);
             if (denominator < 0) {
                 numerator = -numerator;
                 denominator = -denominator;
             }
-            this.numerator=numerator / tmp;
-            this.denominator=denominator / tmp;
+            this.numerator = numerator / tmp;
+            this.denominator = denominator / tmp;
         }
     }
 
