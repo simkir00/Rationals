@@ -119,7 +119,11 @@ public class Rational {
     }
 
     @Override
-    public String toString() {
-        return String.format("%d/%d", numerator, denominator);
+    public String toString(){
+        if (this.denominator==1){
+            return String.format("%d", numerator);
+        }else{
+            return String.format("%d/%d", numerator, denominator);
+        }
     }
 }
