@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        System.out.print("Input two numbers to create rational: ");
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int d = in.nextInt();
         Rational r1 = new Rational(n, d);
-        System.out.printf("Input rational: %s\nIn a double form: %.2f\n", r1, r1.toDouble());
+        System.out.printf("Result rational: %s\nIn a double form: %.2f\n", r1, r1.toDouble());
         Rational r2 = new Rational(r1.add(new Rational(1, 6)));
-        System.out.printf("New rational: %s\n", r2);
+        System.out.printf("New rational(this + 1/6): %s\n", r2);
 
         RationalList arr1 = new RationalList().addRational(r1).addRational(r2);
         System.out.printf("Rational array: %s\n", arr1);
