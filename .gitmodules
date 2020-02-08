@@ -1,0 +1,3 @@
+[submodule "External-library"]
+	path = External-library
+	url = https://github.com/simkir00/External-library.git
